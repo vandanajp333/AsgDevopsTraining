@@ -40,6 +40,20 @@ public class AppTest
         }
     }
 
+    @Test
+    public void testTextLength()
+    {
+        App.main(null);
+        try {
+            String text = "abcde";
+            String text2 = "t2zzg";
+
+            assertTrue( text.length()==text2.length());
+        } catch (AssertionError e) {
+            fail("\"length\" does not \"match!\"");
+        }
+    }
+
     @After
     public void cleanUpStreams() {
         System.setOut(null);
